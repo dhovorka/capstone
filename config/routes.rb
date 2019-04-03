@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   namespace :api do
 
 get "/comments" => "comments#index"
+get "/comments" => "comments#show"
 
 end
 end

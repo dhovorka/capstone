@@ -5,4 +5,9 @@ def index
   render "index.json.jbuilder"
 end
 
+def show
+  @comment = Comment.find_by(id: params[:id])
+  render "show.json.jbuilder"
+end
+
 end
