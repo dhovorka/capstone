@@ -11,10 +11,10 @@ def show
 end
 
 def create
-  @comment = Comment.create(
+  @comment = Comment.new(
     content: params[:content],
     user_id: params[:user_id],
-    tournament_id: params[:tournament_id]
+    tournament_id: params[:tournament_id],
     )
   if @comment.save
   render "show.json.jbuilder"
@@ -25,6 +25,12 @@ def update
   @comment = Comment.find_by(id: params[:id])
   @comment.content = params[:content] || @comment.content
   @comment.save
+end
+
+def destroy
+  @comment = Comment.find_by(id: params[:id])
+  @comment.destroy
+  render "show.json.jbuilder"
 end
 
 end
