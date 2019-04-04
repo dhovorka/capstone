@@ -21,4 +21,10 @@ def create
 end
 end
 
+def update
+  @comment = Comment.find_by(id: params[:id])
+  @comment.content = params[:content] || @comment.content
+  @comment.save
+end
+
 end

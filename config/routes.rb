@@ -12,6 +12,7 @@ get "/comments" => "comments#index"
 get "/comments/:id" => "comments#show"
 
 post "/comments" => "comments#create"
+patch "/comments/:id" => "comments#update"
 
 end
 end
