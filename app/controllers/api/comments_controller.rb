@@ -10,4 +10,15 @@ def show
   render "show.json.jbuilder"
 end
 
+def create
+  @comment = Comment.create(
+    content: params[:content],
+    user_id: params[:user_id],
+    tournament_id: params[:tournament_id]
+    )
+  if @comment.save
+  render "show.json.jbuilder"
+end
+end
+
 end
