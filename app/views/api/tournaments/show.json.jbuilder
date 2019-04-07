@@ -1,0 +1,1 @@
+json.partial! "tournaments.json.jbuilder", tournament: @tournament 

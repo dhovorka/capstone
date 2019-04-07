@@ -14,8 +14,11 @@ post "/comments" => "comments#create"
 patch "/comments/:id" => "comments#update"
 delete "/comments/:id" => "comments#destroy"
 
+#tournaments
+get "/tournaments" => "tournaments#index"
 get "/tournaments/:id" => "tournaments#show"
 
+#sessions
 post "/sessions" => "sessions#create"
 
 end
