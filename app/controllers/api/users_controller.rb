@@ -5,6 +5,8 @@ def create
   email: params[:email],
   first_name: params[:first_name],
   last_name: params[:last_name],
+  password: params[:password],
+  password_confirmation: params[:password_confirmation]
   #need to look at password_digest
   )
   if @user.save

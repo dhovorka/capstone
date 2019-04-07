@@ -14,6 +14,10 @@ post "/comments" => "comments#create"
 patch "/comments/:id" => "comments#update"
 delete "/comments/:id" => "comments#destroy"
 
+get "/tournaments/:id" => "tournaments#show"
+
+post "/sessions" => "sessions#create"
+
 end
 
 namespace :api do

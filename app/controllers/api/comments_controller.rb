@@ -1,5 +1,6 @@
 class Api::CommentsController < ApplicationController
 
+
 def index
   @comments = Comment.all
   render "index.json.jbuilder"
@@ -12,13 +13,15 @@ end
 
 def create
   @comment = Comment.new(
-    content: params[:content],
-    user_id: params[:user_id],
+    user_id: current_user.id,
     tournament_id: params[:tournament_id],
+    content: params[:content]
     )
   if @comment.save
   render "show.json.jbuilder"
-end
+  else
+  render json: {errors: @comment.errors.full_messages}, status: :unprocessible_entity
+  end
 end
 
 def update

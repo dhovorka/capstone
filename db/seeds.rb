@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-  User.create({email: "dan@email.com", password_digest:"password", first_name:"Daniel", last_name:"Hovorka"})
-  User.create({email: "steve@email.com", password_digest:"password", first_name:"Steven", last_name:"Hovorka"})
-  User.create({email: "josh@email.com", password_digest:"password", first_name:"Josh", last_name:"Taylor"})
-  User.create({email: "harriet@email.com", password_digest:"password", first_name:"Harriet", last_name:"Wheaton"})
-  User.create({email: "norton@email.com", password_digest:"password", first_name:"Norton", last_name:"Smith"})
+  User.create({email: "dan@email.com", password:"password", first_name:"Daniel", last_name:"Hovorka"})
+  User.create({email: "steve@email.com", password:"password", first_name:"Steven", last_name:"Hovorka"})
+  User.create({email: "josh@email.com", password:"password", first_name:"Josh", last_name:"Taylor"})
+  User.create({email: "harriet@email.com", password:"password", first_name:"Harriet", last_name:"Wheaton"})
+  User.create({email: "norton@email.com", password:"password", first_name:"Norton", last_name:"Smith"})
 
   Tournament.create({ name:"Australian Open" ,location:"Melbourne, Australia", description:"The first grand slam of the year kicks off in Januray"})
   Tournament.create({ name:"French Open" ,location:"Paris, France", description:"The second major of the season takes place in historic Paris"})
