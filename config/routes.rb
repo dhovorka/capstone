@@ -19,6 +19,7 @@ get "/tournaments" => "tournaments#index"
 post "/tournaments" => "tournaments#create"
 get "/tournaments/:id" => "tournaments#show"
 delete "/tournaments/:id" => "tournaments#destroy"
+patch "/tournaments/:id" => "tournaments#update"
 
 #sessions
 post "/sessions" => "sessions#create"
