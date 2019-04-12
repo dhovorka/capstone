@@ -23,12 +23,12 @@ def show
 end
 
 def update
-@tournament = Tournament.find_by(id: params[:id])
-@tournament.name = params[:name] || @tournament.name
-@tournament.location = params[:location] || @tournament.location
-@tournament.description = params[:description] || @tournament.description 
-@tournament.save
-render "show.json.jbuilder"
+  @tournament = Tournament.find_by(id: params[:id])
+  @tournament.name = params[:name] || @tournament.name
+  @tournament.location = params[:location] || @tournament.location
+  @tournament.description = params[:description] || @tournament.description 
+  @tournament.save
+  render "show.json.jbuilder"
 end
 
 def destroy

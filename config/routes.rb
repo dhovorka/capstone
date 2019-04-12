@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   #   get "/photos" => "photos#index"
   # end
   namespace :api do
-
+#comments
 get "/comments" => "comments#index"
 get "/comments/:id" => "comments#show"
 post "/comments" => "comments#create"
