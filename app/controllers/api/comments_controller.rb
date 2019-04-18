@@ -14,7 +14,7 @@ end
 def create
   @comment = Comment.new(
     user_id: current_user.id,
-    tournament_id: 1,
+    tournament_id: params[:tournament_id],
     content: params[:content]
     )
   if @comment.save
