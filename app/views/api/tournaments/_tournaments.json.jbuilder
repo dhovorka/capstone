@@ -4,3 +4,5 @@ json.location tournament.location
 json.description tournament.description
 json.tournament_comments tournament.comments
 json.coordinates tournament.coordinates
+json.image tournament.image
+json.website tournament.website
