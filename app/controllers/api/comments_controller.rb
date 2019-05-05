@@ -1,6 +1,5 @@
 class Api::CommentsController < ApplicationController
 
-
 def index
   @comments = Comment.all
   render "index.json.jbuilder"
@@ -18,9 +17,10 @@ def create
     content: params[:content]
     )
   if @comment.save
-  render "show.json.jbuilder"
+    render "show.json.jbuilder"
+    reply
   else
-  render json: {errors: @comment.errors.full_messages}, status: :unprocessible_entity
+    render json: {errors: @comment.errors.full_messages}, status: :unprocessible_entity
   end
 end
 
@@ -37,3 +37,4 @@ def destroy
 end
 
 end
+

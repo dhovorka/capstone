@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'messages/reply'
   # EXAMPLE HTML ROUTE
   # get "/photos" => "photos#index"
 
@@ -23,13 +24,6 @@ patch "/tournaments/:id" => "tournaments#update"
 
 #sessions
 post "/sessions" => "sessions#create"
-
-end
-
-namespace :api do
-
-post "/users" => "users#create"
-
 
 end
 end
