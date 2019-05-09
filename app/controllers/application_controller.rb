@@ -42,20 +42,7 @@ class ApplicationController < ActionController::Base
     sms = @client.messages.create(
       from: from_number,
       to: boot_twilio,
-      body: "Hello there, thanks for posting your comment current_user.name !"
+      body: "Hey there #{current_user.first_name}! A new comment was added to Tennis|Findr, have a look and start planning your trip!"
     )
   end
 end
-
-
-# def reply
-#     message_body = params["Body"]
-#     from_number = params["From"]
-#     boot_twilio
-#     sms = @client.messages.create(
-#       from: Rails.application.secrets.twilio_number,
-#       to: from_number,
-#       body: "Hello there, thanks for texting me. Your number is #{from_number}."
-#     )
-
-#   end
